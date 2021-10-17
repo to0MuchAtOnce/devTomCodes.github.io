@@ -1,1 +1,266 @@
-style
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  max-height: 100vh;
+  font-family: 'Montserrat';
+  background: #eee;
+}
+
+/* NAV */
+
+.navbar {
+  display: flex;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.about {
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+  text-decoration: none;
+}
+
+.about:hover {
+  font-size: 18px;
+  color: steelblue;
+  text-decoration: none;
+}
+
+.line {
+  margin: 1px;
+  height: 3px;
+  width: 38px;
+  background: #fcd000;
+}
+
+.line2 {
+  margin: 1px;
+  height: 3px;
+  width: 45px;
+  background: #73c451;
+}
+
+.line3 {
+  margin: 1px;
+  height: 3px;
+  width: 30px;
+  background: #1da1f2;
+}
+
+/* MAIN */
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-weight: 200;
+  font-size: 4rem;
+  margin-top: 40vh;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  cursor: pointer;
+  margin: 1rem 2rem;
+}
+
+.icon-twitter {
+  width: 38px;
+  height: 38px;
+  fill: #1da1f2;
+}
+
+.icon-github {
+  width: 38px;
+  height: 38px;
+  fill: #73c451;
+}
+
+.icon-codepen {
+  width: 38px;
+  height: 38px;
+  fill: #fcd000;
+}
+
+.link::after {
+  content: '';
+  display: block;
+  align-items: center;
+  position: absolute;
+  height: 3px;
+  width: 32px;
+  top: 62%;
+  transform: translateX(10%);
+  background: #fff;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+.link-codepen:hover::after {
+  content: '';
+  border-radius: 50px;
+  display: block;
+  align-items: center;
+  position: absolute;
+  height: 3px;
+  width: 32px;
+  top: 59%;
+  background: #fcd000;
+  transform: translateX(10%);
+  transition: 0.35s ease;
+  opacity: 1;
+}
+
+.link-github:hover::after {
+  content: '';
+  border-radius: 50px;
+  display: block;
+  align-items: center;
+  position: absolute;
+  height: 3px;
+  width: 32px;
+  top: 59%;
+  background: #73c451;
+  transform: translateX(10%);
+  transition: 0.35s ease;
+  opacity: 1;
+}
+
+.link-twitter:hover::after {
+  content: '';
+  border-radius: 50px;
+  display: block;
+  align-items: center;
+  position: absolute;
+  height: 3px;
+  width: 32px;
+  top: 59%;
+  background: #1da1f2;
+  transform: translateX(10%);
+  transition: 0.35s ease;
+  opacity: 1;
+}
+
+/* ABOUT */
+.hero-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 90vh;
+  margin: 0 35px;
+}
+
+.hero-title {
+  padding: 10px 0;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.hero-para {
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 698px) {
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: 200;
+    font-size: 2.8rem;
+    margin-top: 40vh;
+  }
+
+  .icon-twitter {
+    width: 28px;
+    height: 28px;
+    fill: #1da1f2;
+  }
+
+  .icon-github {
+    width: 28px;
+    height: 28px;
+    fill: #73c451;
+  }
+
+  .icon-codepen {
+    width: 28px;
+    height: 28px;
+    fill: #fcd000;
+  }
+
+  .link::after {
+    content: '';
+    display: block;
+    align-items: center;
+    position: absolute;
+    height: 2px;
+    width: 18px;
+    top: 57%;
+    transform: translateX(15%);
+    background: #fff;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+
+  .link-codepen:hover::after {
+    content: '';
+    display: block;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    width: 22px;
+    top: 54.5%;
+    background: #fcd000;
+    transform: translateX(15%);
+    transition: 0.3s ease;
+    opacity: 1;
+  }
+
+  .link-github:hover::after {
+    content: '';
+    display: block;
+    align-items: center;
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    top: 54.5%;
+    background: #73c451;
+    transform: translateX(15%);
+    transition: 0.3s ease;
+    opacity: 1;
+  }
+
+  .link-twitter:hover::after {
+    content: '';
+    display: block;
+    align-items: center;
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    top: 54.5%;
+    background: #1da1f2;
+    transform: translateX(15%);
+    transition: 0.3s ease;
+    opacity: 1;
+  }
+}
